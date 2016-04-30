@@ -1,5 +1,5 @@
 
-var data = {
+var chartTemplate = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
         {
@@ -30,13 +30,19 @@ function onCreateView(rootContainer){
   var view = document.createElement('canvas');
   view.id = 'myChart';
   rootContainer.appendChild(view);
-  alert(rootContainer.id);
   return view;
 }
 
 function onRender(view, data){
+    chartTemplate.labels.push("");
+    chartTemplate.datasets[0].data.push(data.total_users);
 new Chart(view, {
     type: 'line',
-    data: data
+    data: chartTemplate,
+    options: {
+        xAxes: [{
+            display: false
+        }]
+    }
 });
 }
