@@ -25,21 +25,13 @@ var chartTemplate = {
         }
     ]
 };
-
+var myChart;
 function onCreateView(rootContainer){
   var view = document.createElement('canvas');
   view.id = 'myChart';
   rootContainer.appendChild(view);
-  return view;
-}
-
-var counter = 0;
-function onRender(view, data){
-    console.log(data.total_users);
-    counter++;
-    chartTemplate.labels.push("" + counter);
-    chartTemplate.datasets[0].data.push(data.total_users);
-new Chart(view, {
+  
+  myChart = new Chart(view, {
     type: 'line',
     data: chartTemplate,
     options: {
@@ -48,4 +40,13 @@ new Chart(view, {
         }]
     }
 });
+  return view;
+}
+
+var counter = 0;
+function onRender(view, data){
+    console.log(data.total_users);
+    counter++;
+    myChart.data.datasets[0].push(data.total_users);
+    myChart.update();
 }
