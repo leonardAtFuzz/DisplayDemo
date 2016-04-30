@@ -34,6 +34,7 @@ function onCreateView(rootContainer){
 }
 
 function onRender(view, data){
+    console.log(data.total_users);
     chartTemplate.labels.push("");
     chartTemplate.datasets[0].data.push(data.total_users);
 new Chart(view, {
