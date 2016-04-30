@@ -37,11 +37,6 @@ function onCreateView(rootContainer){
 function onRender(view, data){
 new Chart(view, {
     type: 'line',
-    data: data,
-    options: {
-        xAxes: [{
-            display: false
-        }]
-    }
+    data: data
 });
 }
