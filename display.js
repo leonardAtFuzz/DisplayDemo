@@ -33,9 +33,11 @@ function onCreateView(rootContainer){
   return view;
 }
 
+var counter = 0;
 function onRender(view, data){
     console.log(data.total_users);
-    chartTemplate.labels.push("");
+    counter++;
+    chartTemplate.labels.push("" + counter);
     chartTemplate.datasets[0].data.push(data.total_users);
 new Chart(view, {
     type: 'line',
