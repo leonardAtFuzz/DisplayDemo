@@ -37,7 +37,7 @@ function onRender(view, data){
 new Chart(view, {
     type: 'line',
     data: data,
-    options: : {
+    options: {
         xAxes: [{
             display: false
         }]
