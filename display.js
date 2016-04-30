@@ -30,6 +30,7 @@ function onCreateView(rootContainer){
   var view = document.createElement('canvas');
   view.id = 'myChart';
   rootContainer.appendChild(view);
+  alert("onCreateView");
   return view;
 }
 
