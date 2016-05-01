@@ -52,6 +52,4 @@ function onRender(view, data){
     }
     myChart.data.datasets[0].data.push(data.total_users);
     myChart.update();
-        console.log(""+ counter + " : " + data.total_users);
-
 }
