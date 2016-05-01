@@ -4,7 +4,7 @@ var chartTemplate = {
     datasets: [
         {
             label: "Monthly and Active Users",
-            fill: false,
+            fill: true,
             lineTension: 0.1,
             backgroundColor: "rgba(75,192,192,0.4)",
             borderColor: "rgba(75,192,192,1)",
