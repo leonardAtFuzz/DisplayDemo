@@ -3,7 +3,7 @@ var chartTemplate = {
     labels: [],
     datasets: [
         {
-            label: "My First dataset",
+            label: "Monthly and Active Users",
             fill: false,
             lineTension: 0.1,
             backgroundColor: "rgba(75,192,192,0.4)",
