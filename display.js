@@ -47,6 +47,9 @@ var counter = 0;
 function onRender(view, data){
     counter++;
     myChart.data.labels.push(""+counter);
+    if( myChart.data.datasets[0].data.length > 15 ){
+        myChart.data.datasets[0].data.shift();
+    }
     myChart.data.datasets[0].data.push(data.total_users);
     myChart.update();
         console.log(""+ counter + " : " + data.total_users);
