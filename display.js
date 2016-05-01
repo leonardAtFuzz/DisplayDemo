@@ -43,7 +43,7 @@ function onCreateView(rootContainer){
   return view;
 }
 
-var counter = 0;
+var counter= 0;
 function onRender(view, data){
     counter++;
     if( myChart.data.datasets[0].data.length > 15 ){
