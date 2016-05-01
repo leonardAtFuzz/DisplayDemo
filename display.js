@@ -46,7 +46,6 @@ function onCreateView(rootContainer){
 var counter = 0;
 function onRender(view, data){
     counter++;
-    myChart.data.labels.push(""+counter);
     if( myChart.data.datasets[0].data.length > 15 ){
         myChart.data.datasets[0].data.shift();
     }
